@@ -34,8 +34,8 @@
         font-family: $secondary-font;
         color: $grayish-blue;
         text-transform: uppercase;
-        font-size: rem(17);
-        letter-spacing: rem(6);
+        font-size: rem(15);
+        letter-spacing: rem(4);
         
         & span {
             letter-spacing: normal;
@@ -46,6 +46,11 @@
             margin-right: rem(10);
             border-radius: rem(20);
         }
+
+        @include breakpoint("lg") {
+            font-size: rem(17);
+            letter-spacing: rem(7);
+        } 
     }
 
     &__title {
