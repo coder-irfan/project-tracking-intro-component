@@ -1,0 +1,140 @@
+.header {
+
+    &__layer {
+        background-color: $light-grayish-blue;
+        height: 50vh;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -999;
+        border-bottom-left-radius: 100px;
+
+        @include breakpoint("lg") {
+            height: 70vh;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint("md") {
+            
+        }
+    }
+
+    &__logo img{
+        width: rem(24);
+        height: rem(24);
+
+        @include breakpoint("md") {
+            width: rem(28);
+            height: rem(28);
+        }
+
+        @include breakpoint("lg") {
+            width: rem(32);
+            height: rem(32);
+        }
+    }
+}
+
+.lists {
+    position: fixed;
+    top: 14%;
+    right: -100%;
+    width: 83vw;
+    height: 37vh;
+    box-shadow: 0 0 rem(10) $grayish-blue;
+    background-color: hsl(0, 0%, 100%);
+    padding: rem(28) rem(24);
+    border-radius: rem(4);
+    transition: all .6s;
+    z-index: 999;
+
+    @include breakpoint("md") {
+        position: static;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        background: none;
+        box-shadow: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+    &__show-menu {
+        right: 8%;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(28);
+    
+        @include breakpoint("md") {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: rem(20);
+        }
+
+        @include breakpoint("lg") {
+            column-gap: rem(42);
+        }
+    }
+
+    &__link {
+        font-family: $secondary-font;
+        font-weight: $weight-700;
+        font-size: rem(21);
+        color: $very-dark-blue;
+        text-transform: uppercase;
+        letter-spacing: rem(1);
+
+        @include breakpoint("md") {
+            font-size: $font-size;
+        }
+    }
+
+    &__login {
+        color: $grayish-blue;
+    }
+
+    &__separator {
+        width: 100%;
+        height: rem(1);
+        background-color: $grayish-blue;
+
+        @include breakpoint("md") {
+            width: auto;
+            height: auto;
+            background: none;
+
+            &::before {
+                content: ".";
+                font-size: rem(50);
+                color: $grayish-blue;
+                display: flex;
+                transform: translateY(rem(-15));
+            }
+        }
+    }
+
+    &__close-menu, &__hamburger-menu {
+        font-size: rem(24);
+        position: absolute;
+        top: rem(35);
+        right: rem(32);
+        cursor: pointer;
+
+        @include breakpoint("md") {
+            display: none;
+        }
+    }
+}
+

@@ -1,0 +1,11 @@
+// 600px, 1080px, 
+$breakpoints-up: (
+    'lg': 67.5em,
+    'md': 37.5em,
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}

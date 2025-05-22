@@ -1,0 +1,156 @@
+.main {
+    margin-top: rem(60);
+
+    @include breakpoint("md") {
+        margin-top: rem(100);
+    }
+
+    @include breakpoint("lg") {
+        margin-top: rem(145);
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: rem(100);
+    
+        @include breakpoint("lg") {
+            grid-template-columns: 5fr 7fr;
+        }
+    }
+
+    &__wrapper {
+        margin-inline: auto;
+        order: 2;
+
+        @include breakpoint("lg") {
+            width: rem(600);
+            order: unset;
+            margin-inline: unset;
+        }
+    }
+
+    &__subtitle {
+        font-family: $secondary-font;
+        color: $grayish-blue;
+        text-transform: uppercase;
+        font-size: rem(17);
+        letter-spacing: 24%;
+        
+        & span {
+            letter-spacing: normal;
+            background-color: $very-dark-blue;
+            font-weight: $weight-700;
+            color: $light-grayish-blue;
+            padding: rem(3) rem(12) rem(4);
+            margin-right: rem(10);
+            border-radius: rem(20);
+        }
+    }
+
+    &__title {
+        font-family: $secondary-font;
+        font-size: rem(40);
+        margin-top: rem(20);
+        line-height: 1;
+        text-transform: uppercase;
+        color: $very-dark-blue;
+
+        @include breakpoint("md") {
+            font-size: rem(50);
+        }
+
+        @include breakpoint("lg") {
+            font-size: rem(66);
+            margin-top: rem(15);
+        }
+    }
+
+    &__text {
+        font-size: $font-size;
+        font-family: $primary-font;
+        margin-top: rem(20);
+        color: $very-grayish-blue;
+
+        @include breakpoint("lg") {
+            margin-top: rem(30);
+        }
+    }
+
+    &__image {
+        transform: scale(1.1);
+
+        @include breakpoint("md") {
+            transform: scale(0.9);
+        }
+    
+        @include breakpoint("lg") {
+            padding-left: rem(20);
+        }
+    }
+
+    & img {
+        max-width: 100%;
+        transform: scale(1.2);
+        margin-inline: auto;
+
+        @include breakpoint("md") {
+            transform: scale(0.9);
+        }
+
+        @include breakpoint("lg") {
+            max-width: unset;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        margin-top: rem(35);
+
+        @include breakpoint("md") {
+            margin-top: rem(40);
+        }
+
+        @include breakpoint("lg") {
+            margin-top: rem(70);
+        }
+    }
+
+    &__button {
+        padding: rem(10) rem(20) rem(12);
+        border: none;
+        border-radius: rem(6);
+        background-color: $red;
+        color: $light-grayish-blue;
+        font-weight: $weight-700;
+        font-family: $secondary-font;
+        font-size: rem(16);
+        letter-spacing: rem(1);
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .3s;
+
+        @include breakpoint("lg") {
+            font-size: $font-size;
+            padding: rem(12) rem(30) rem(14);
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__preview {
+        padding-left: rem(10);
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        letter-spacing: 10%;
+        color: $grayish-blue;
+
+        @include breakpoint("lg") {
+            padding-left: rem(20);
+            letter-spacing: 24%;
+        }
+    }
+}

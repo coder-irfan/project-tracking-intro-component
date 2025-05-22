@@ -1,0 +1,41 @@
+@import 'variable';
+@import 'function';
+@import 'breakpoint';
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: rem(38) rem(32);
+
+    @include breakpoint("md") {
+        padding: rem(50) rem(80);
+    }
+
+    @include breakpoint("lg") {
+        padding: rem(64) rem(166);
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline
+    }
+}
+
+li {
+    list-style: none;
+}
