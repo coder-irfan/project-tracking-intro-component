@@ -35,7 +35,7 @@
         color: $grayish-blue;
         text-transform: uppercase;
         font-size: rem(17);
-        letter-spacing: 24%;
+        letter-spacing: rem(6);
         
         & span {
             letter-spacing: normal;
@@ -96,6 +96,7 @@
 
         @include breakpoint("lg") {
             max-width: unset;
+            transform: scale(1.1);
         }
     }
 
@@ -141,12 +142,12 @@
         padding-left: rem(10);
         text-transform: uppercase;
         font-family: $secondary-font;
-        letter-spacing: 10%;
+        letter-spacing: rem(4);
         color: $grayish-blue;
 
         @include breakpoint("lg") {
             padding-left: rem(20);
-            letter-spacing: 24% !important;
+            letter-spacing: rem(5);
         }
     }
 }
