@@ -43,8 +43,12 @@
             font-weight: $weight-700;
             color: $light-grayish-blue;
             padding: rem(3) rem(12) rem(4);
-            margin-right: rem(10);
+            margin-right: rem(5);
             border-radius: rem(20);
+
+            @include breakpoint("lg") {
+                margin-right: rem(10);
+            }
         }
 
         @include breakpoint("lg") {
