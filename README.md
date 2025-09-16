@@ -4,7 +4,7 @@ This is a solution to the **Project Tracking Intro Component** challenge on [Fro
 
 ## 🚀 Live Demo
 
-[View Live Site](https://Mohammad-Irfan-Noorzada.github.io/project-tracking-intro-component)
+[View Live Site](https://coder-irfan.github.io/project-tracking-intro-component)
 
 ## 🛠️ Built With
 
